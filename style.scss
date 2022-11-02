@@ -108,6 +108,7 @@ li {
   margin: 0 auto;
 }
 .section-2 {
+  position: relative;
   &_con {
     margin: 0 auto;
     display: flex;
@@ -145,6 +146,10 @@ li {
         width: 100%;
       }
     }
+  }
+  &_back {
+    position: absolute;
+    right: 0;
   }
 }
 .grid {
@@ -206,6 +211,18 @@ li {
     border-radius: 1.5rem;
     padding: 0.75rem 1.5rem;
     text-decoration: none;
+  }
+  &_back {
+    &_left {
+      position: absolute;
+      left: 0;
+      bottom: -5rem;
+    }
+    &_right {
+      position: absolute;
+      right: 0;
+      bottom: -5rem;
+    }
   }
 }
 
@@ -333,10 +350,12 @@ li {
   }
 }
 .test {
+  position: relative;
   h1 {
     margin-top: 8.75rem;
     font-size: 2.25rem;
     text-align: center;
+    margin-bottom: 2.9rem;
   }
   &_border {
     height: 100%;
@@ -432,6 +451,108 @@ li {
       transition: opacity 0.2s;
       border-radius: 5px;
       overflow: visible;
+    }
+  }
+  &_feedback {
+    margin-bottom: 11.25rem;
+    background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+    border-radius: 0.3rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 18.6rem;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+  &_back {
+    position: absolute;
+    right: -12.5rem;
+    bottom: -18.4rem;
+  }
+}
+.footer {
+  background-color: #000;
+  position: relative;
+  &_con {
+    padding: 4rem 0 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3.5rem;
+    &_donate {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      font-size: 1rem;
+      text-transform: uppercase;
+      text-align: center;
+      align-items: center;
+      border-radius: 0.5rem;
+      background-color: #f9804b;
+      padding: 1rem;
+    }
+  }
+  &_form {
+    max-width: 36.6rem;
+    grid-column: 3 / -1;
+    justify-self: right;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem 1rem;
+    h3 {
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: 400;
+      line-height: 1.8rem;
+      //   width: 100%;
+    }
+    &-input {
+      border: 1px solid orange;
+      border-radius: 0.5rem;
+      color: #fff;
+      outline: none;
+      flex: 1;
+      background-color: transparent;
+      //   width: 70%;
+      line-height: 140%;
+      padding: 0.7rem 1rem;
+      width: 14.25rem;
+    }
+    &-btn {
+      font-size: 1rem;
+      color: #4b9200;
+      border-radius: 0.5rem;
+      //   width: 30%;
+      padding: 0.7rem 1.5rem;
+    }
+  }
+  &_socials {
+    list-style: none;
+    grid-column: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    &_li {
+      display: flex;
+      flex-wrap: wrap;
+      &_img {
+        height: 2.6rem;
+        width: 2.6rem;
+        background-color: #c4c4c480;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1.2rem;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
     }
   }
 }
