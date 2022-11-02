@@ -56,9 +56,6 @@ li {
 }
 .front {
   width: 31.25rem;
-  //   height: 25rem;
-  //   height: 78rem;
-  //   background: url(/assets/images/Giant\ Panda.png);
   z-index: 1;
   color: #fff;
   position: relative;
@@ -255,17 +252,14 @@ li {
   &_inside {
     border-radius: 2rem;
     background: #fdfdff85;
-    // backdrop-filter: blur(2px);
     color: #333b41;
     padding: 0 4.3rem;
     width: 72.5rem;
-    // height: 21.8rem;
     &_text {
       max-width: 62.8rem;
       margin: 0 auto;
       h1 {
         font-size: 3rem;
-        // font-weight: 700;
         line-height: 1.2;
         color: #fe9013;
         margin-bottom: 1.5rem;
