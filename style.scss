@@ -174,6 +174,7 @@ li {
   }
 }
 .cart {
+  position: relative;
   &_a {
     display: flex;
     justify-content: center;
@@ -181,7 +182,22 @@ li {
     text-align: center;
     margin: 5rem 0;
   }
-
+  &_btn-left {
+    position: absolute;
+    left: -6rem;
+    top: 44.5%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+  }
+  &_btn-right {
+    position: absolute;
+    right: -6rem;
+    top: 44.5%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+  }
   a {
     text-transform: uppercase;
     font-size: 1rem;

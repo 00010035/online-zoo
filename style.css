@@ -174,12 +174,31 @@ li {
   text-transform: uppercase;
 }
 
+.cart {
+  position: relative;
+}
 .cart_a {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   margin: 5rem 0;
+}
+.cart_btn-left {
+  position: absolute;
+  left: -6rem;
+  top: 44.5%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+}
+.cart_btn-right {
+  position: absolute;
+  right: -6rem;
+  top: 44.5%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
 }
 .cart a {
   text-transform: uppercase;
