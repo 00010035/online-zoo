@@ -53,6 +53,7 @@ li {
 
   a:hover {
     color: #f9804b;
+    transition: 0.5s ease;
   }
   &_foot {
     color: #fff;
@@ -105,6 +106,7 @@ li {
     }
     button:hover {
       background-color: #ac4519;
+      transition: 0.5s ease;
     }
   }
 }
@@ -196,18 +198,40 @@ li {
   &_btn-left {
     position: absolute;
     left: 6rem;
-    top: 44.5%;
+    top: 44%;
     transform: translateY(-50%);
-    background: transparent;
+    background: #f9804b;
     border: none;
+    border-radius: 50%;
+    padding: 1.5rem;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &_btn-left:hover {
+    background: #cb511c;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+  &_btn-right:hover {
+    background: #cb511c;
+    cursor: pointer;
+    transition: 0.5s ease;
   }
   &_btn-right {
     position: absolute;
     right: 6rem;
-    top: 44.5%;
+    top: 44%;
     transform: translateY(-50%);
-    background: transparent;
+    background: #f9804b;
     border: none;
+    border-radius: 50%;
+    padding: 1.5rem;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
   a {
     text-transform: uppercase;
@@ -217,6 +241,10 @@ li {
     border-radius: 1.5rem;
     padding: 0.75rem 1.5rem;
     text-decoration: none;
+  }
+  a:hover {
+    background-color: #cb511c;
+    transition: 0.5s ease;
   }
   &_back {
     &_left {
@@ -323,6 +351,10 @@ li {
         max-width: 18.6rem;
         margin: 0 auto;
         margin-top: 2rem;
+      }
+      a:hover {
+        background: #cb511c;
+        // transition: 0.7s ease;
       }
     }
   }
@@ -473,6 +505,10 @@ li {
       color: #fff;
     }
   }
+  &_feedback:hover {
+    background: #e17141;
+    cursor: pointer;
+  }
   &_back {
     position: absolute;
     right: -12.5rem;
@@ -498,6 +534,10 @@ li {
       border-radius: 0.5rem;
       background-color: #f9804b;
       padding: 1rem;
+    }
+    &_donate:hover {
+      background-color: #e17141;
+      cursor: pointer;
     }
   }
   &_form {
@@ -528,10 +568,15 @@ li {
     }
     &-btn {
       font-size: 1rem;
-      color: #4b9200;
+      color: orange;
+      cursor: pointer;
       border-radius: 0.5rem;
       //   width: 30%;
       padding: 0.7rem 1.5rem;
+    }
+    &-btn:hover {
+      background-color: #f9804b;
+      color: #fff;
     }
   }
 
@@ -552,6 +597,12 @@ li {
         align-items: center;
         justify-content: center;
         margin-right: 1.2rem;
+      }
+      &_img:hover {
+        background-color: #f9804b;
+      }
+      p:hover {
+        color: #f9804b;
       }
       a {
         text-decoration: none;
@@ -576,6 +627,7 @@ li {
     }
     a:hover {
       color: #f9804b;
+      transition: 0.5s ease;
     }
   }
   &_aut {

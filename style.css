@@ -54,6 +54,7 @@ li {
 }
 .header a:hover {
   color: #f9804b;
+  transition: 0.5s ease;
 }
 .header_foot {
   color: #fff;
@@ -108,6 +109,7 @@ li {
 }
 .front_text button:hover {
   background-color: #ac4519;
+  transition: 0.5s ease;
 }
 
 .cc {
@@ -202,18 +204,40 @@ li {
 .cart_btn-left {
   position: absolute;
   left: 6rem;
-  top: 44.5%;
+  top: 44%;
   transform: translateY(-50%);
-  background: transparent;
+  background: #f9804b;
   border: none;
+  border-radius: 50%;
+  padding: 1.5rem;
+}
+.cart_btn-left img {
+  width: 100%;
+  height: 100%;
+}
+.cart_btn-left:hover {
+  background: #cb511c;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.cart_btn-right:hover {
+  background: #cb511c;
+  cursor: pointer;
+  transition: 0.5s ease;
 }
 .cart_btn-right {
   position: absolute;
   right: 6rem;
-  top: 44.5%;
+  top: 44%;
   transform: translateY(-50%);
-  background: transparent;
+  background: #f9804b;
   border: none;
+  border-radius: 50%;
+  padding: 1.5rem;
+}
+.cart_btn-right img {
+  width: 100%;
+  height: 100%;
 }
 .cart a {
   text-transform: uppercase;
@@ -223,6 +247,10 @@ li {
   border-radius: 1.5rem;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
+}
+.cart a:hover {
+  background-color: #cb511c;
+  transition: 0.5s ease;
 }
 .cart_back_left {
   position: absolute;
@@ -306,6 +334,9 @@ li {
   max-width: 18.6rem;
   margin: 0 auto;
   margin-top: 2rem;
+}
+.pick_inside_work_img a:hover {
+  background: #cb511c;
 }
 .pick_grid {
   display: grid;
@@ -424,6 +455,10 @@ li {
   text-decoration: none;
   color: #fff;
 }
+.test_feedback:hover {
+  background: #e17141;
+  cursor: pointer;
+}
 .test_back {
   position: absolute;
   right: -12.5rem;
@@ -452,6 +487,10 @@ li {
   background-color: #f9804b;
   padding: 1rem;
 }
+.footer_con_donate:hover {
+  background-color: #e17141;
+  cursor: pointer;
+}
 .footer_form {
   max-width: 36.6rem;
   grid-column: 3/-1;
@@ -479,9 +518,14 @@ li {
 }
 .footer_form-btn {
   font-size: 1rem;
-  color: #4b9200;
+  color: orange;
+  cursor: pointer;
   border-radius: 0.5rem;
   padding: 0.7rem 1.5rem;
+}
+.footer_form-btn:hover {
+  background-color: #f9804b;
+  color: #fff;
 }
 .footer_socials {
   list-style: none;
@@ -499,6 +543,12 @@ li {
   align-items: center;
   justify-content: center;
   margin-right: 1.2rem;
+}
+.footer_socials_li_img:hover {
+  background-color: #f9804b;
+}
+.footer_socials_li p:hover {
+  color: #f9804b;
 }
 .footer_socials_li a {
   text-decoration: none;
@@ -522,6 +572,7 @@ li {
 }
 .footer_nav a:hover {
   color: #f9804b;
+  transition: 0.5s ease;
 }
 .footer_aut {
   align-self: flex-end;
