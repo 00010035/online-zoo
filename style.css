@@ -339,12 +339,19 @@ li {
   background: #cb511c;
 }
 .pick_grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
+  display: flex;
+  justify-content: space-between;
   max-width: 47.7rem;
   margin: 0 auto;
   margin-top: 3rem;
+  position: relative;
+}
+.pick_grid_vector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: translateY(-42px);
 }
 .pick_grid_con {
   max-width: 10.5rem;
