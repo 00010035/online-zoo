@@ -36,6 +36,9 @@ li {
   display: flex;
   position: relative;
 }
+.header a {
+  color: #fff;
+}
 .header ul {
   display: flex;
   align-items: center;
@@ -91,19 +94,24 @@ li {
 .front_text h1 span {
   color: #ffee2e;
 }
-.front_text p {
+.front_text button {
   width: 18.6rem;
   font-size: 1rem;
   top: 9rem;
+  color: #fff;
+  cursor: pointer;
   background-color: #f9804b;
   padding: 1rem 5rem;
   border-radius: 1.5rem;
   text-align: center;
   margin-top: 3.75rem;
 }
+.front_text button:hover {
+  background-color: #ac4519;
+}
 
 .cc {
-  width: 75rem;
+  width: 72.5rem;
   justify-content: center;
   margin: 0 auto;
 }

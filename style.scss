@@ -23,6 +23,7 @@ ul {
 li {
   display: inline-block;
 }
+
 .header {
   width: 100rem;
   background-color: #000;
@@ -30,6 +31,9 @@ li {
   align-items: center;
   display: flex;
   position: relative;
+  a {
+    color: #fff;
+  }
   ul {
     display: flex;
     align-items: center;
@@ -87,20 +91,25 @@ li {
       font-size: 6.5rem;
       text-align: center;
     }
-    p {
+    button {
       width: 18.6rem;
       font-size: 1rem;
       top: 9rem;
+      color: #fff;
+      cursor: pointer;
       background-color: #f9804b;
       padding: 1rem 5rem;
       border-radius: 1.5rem;
       text-align: center;
       margin-top: 3.75rem;
     }
+    button:hover {
+      background-color: #ac4519;
+    }
   }
 }
 .cc {
-  width: 75rem;
+  width: 72.5rem;
   justify-content: center;
   margin: 0 auto;
 }
