@@ -193,7 +193,7 @@ li {
 }
 .cart_btn-left {
   position: absolute;
-  left: -6rem;
+  left: 6rem;
   top: 44.5%;
   transform: translateY(-50%);
   background: transparent;
@@ -201,7 +201,7 @@ li {
 }
 .cart_btn-right {
   position: absolute;
-  right: -6rem;
+  right: 6rem;
   top: 44.5%;
   transform: translateY(-50%);
   background: transparent;
