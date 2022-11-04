@@ -6,8 +6,12 @@
 
 html {
   font-size: 16px;
-  width: 100rem;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+.active a {
+  color: #f9804b !important;
 }
 
 .container {
@@ -29,7 +33,7 @@ li {
 }
 
 .header {
-  width: 100rem;
+  width: 100%;
   background-color: #000;
   justify-content: space-around;
   align-items: center;
@@ -169,10 +173,12 @@ li {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
   margin-top: 5rem;
+  position: relative;
 }
 .grid img {
   width: 100%;
   height: 100%;
+  transition: transform 0.3s ease;
 }
 .grid_item {
   width: 100%;
@@ -181,9 +187,46 @@ li {
 .grid_cart {
   border: 1px solid #fa6f32;
   border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.grid_cart:hover {
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.grid_cart:hover::before {
+  box-shadow: 0 0 40rem 20rem #000;
+}
+.grid_cart::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  transition: box-shadow 0.3s ease-in-out;
+  box-shadow: 0 0 0 0 #000;
+  z-index: 1;
+}
+.grid_cart:hover .grid_cart_text {
+  z-index: 2;
+  color: #fff;
+  position: absolute;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.2rem;
+  transition: 0.5s ease;
+  bottom: 0.75rem;
+}
+.grid_cart:hover img {
+  transform: scale(1.1);
 }
 .grid_cart_text {
   display: flex;
+  position: relative;
   padding: 0.75rem;
   justify-content: space-between;
 }
@@ -203,8 +246,8 @@ li {
 }
 .cart_btn-left {
   position: absolute;
-  left: 6rem;
-  top: 44%;
+  left: -6rem;
+  top: 50%;
   transform: translateY(-50%);
   background: #f9804b;
   border: none;
@@ -227,8 +270,8 @@ li {
 }
 .cart_btn-right {
   position: absolute;
-  right: 6rem;
-  top: 44%;
+  right: -6rem;
+  top: 50%;
   transform: translateY(-50%);
   background: #f9804b;
   border: none;
@@ -403,12 +446,9 @@ li {
 .test_grid_con_inside {
   display: flex;
   position: static;
-  gap: 1;
+  gap: 0.5rem;
   align-items: center;
   margin-bottom: 1rem;
-}
-.test_grid_con_inside_text {
-  margin-left: 1rem;
 }
 .test_grid_con_inside_text h3 {
   font-size: 1rem;
@@ -433,7 +473,7 @@ li {
   border: 0.5px;
   background-image: linear-gradient(315.75deg, rgba(254, 189, 171, 0.7411764706) 30.06%, rgba(243, 169, 248, 0.6588235294) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.7411764706) 30.06%, rgba(243, 169, 248, 0.6588235294) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
 }
-.test_slide input {
+.test_slide_input {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
@@ -443,7 +483,29 @@ li {
   background: #f5f7f6;
   transition: opacity 0.2s;
   border-radius: 5px;
-  overflow: visible;
+}
+.test_slide_input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 11.5rem;
+  height: 8px;
+  background: #fe9013;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.test_slide_input::-moz-range-thumb {
+  height: 11.5rem;
+  border-radius: 5px;
+  height: 8px;
+  background: #fe9013;
+  cursor: pointer;
+}
+.test_slide_input::-ms-thumb {
+  height: 11.5rem;
+  border-radius: 5px;
+  height: 8px;
+  background: #fe9013;
+  cursor: pointer;
 }
 .test_feedback {
   margin-bottom: 11.25rem;
@@ -551,11 +613,11 @@ li {
   justify-content: center;
   margin-right: 1.2rem;
 }
-.footer_socials_li_img:hover {
-  background-color: #f9804b;
+.footer_socials_li:hover .footer_socials_li_img {
+  background-color: #4b9200;
 }
-.footer_socials_li p:hover {
-  color: #f9804b;
+.footer_socials_li:hover p {
+  color: #4b9200;
 }
 .footer_socials_li a {
   text-decoration: none;

@@ -5,10 +5,12 @@
 }
 html {
   font-size: 16px;
-  width: 100rem;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
-
+.active a {
+  color: #f9804b !important;
+}
 .container {
   left: 0;
   margin: 0;
@@ -25,7 +27,7 @@ li {
 }
 
 .header {
-  width: 100rem;
+  width: 100%;
   background-color: #000;
   justify-content: space-around;
   align-items: center;
@@ -165,9 +167,11 @@ li {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
   margin-top: 5rem;
+  position: relative;
   img {
     width: 100%;
     height: 100%;
+    transition: transform 0.3s ease;
   }
   &_item {
     width: 100%;
@@ -176,9 +180,52 @@ li {
   &_cart {
     border: 1px solid #fa6f32;
     border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+  }
+  &_cart:hover {
+    color: #fff;
+
+    width: 100%;
+    height: 100%;
+    // opacity: 0.2;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  &_cart:hover::before {
+    box-shadow: 0 0 40rem 20rem #000;
+  }
+
+  &_cart::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 0 0 #000;
+    z-index: 1;
+  }
+  &_cart:hover {
+    .grid_cart_text {
+      z-index: 2;
+      color: #fff;
+      position: absolute;
+      font-size: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-size: 1.2rem;
+      transition: 0.5s ease;
+      bottom: 0.75rem;
+    }
+    img {
+      transform: scale(1.1);
+    }
   }
   &_cart_text {
     display: flex;
+    position: relative;
     padding: 0.75rem;
     justify-content: space-between;
     h3 {
@@ -197,8 +244,8 @@ li {
   }
   &_btn-left {
     position: absolute;
-    left: 6rem;
-    top: 44%;
+    left: -6rem;
+    top: 50%;
     transform: translateY(-50%);
     background: #f9804b;
     border: none;
@@ -221,8 +268,8 @@ li {
   }
   &_btn-right {
     position: absolute;
-    right: 6rem;
-    top: 44%;
+    right: -6rem;
+    top: 50%;
     transform: translateY(-50%);
     background: #f9804b;
     border: none;
@@ -435,11 +482,10 @@ li {
       &_inside {
         display: flex;
         position: static;
-        gap: 1;
+        gap: 0.5rem;
         align-items: center;
         margin-bottom: 1rem;
         &_text {
-          margin-left: 1rem;
           h3 {
             font-size: 1rem;
             color: #000;
@@ -482,7 +528,8 @@ li {
         #eaf7fe 127.9%,
         #eaf7fe 149.54%
       );
-    input {
+
+    &_input {
       -webkit-appearance: none;
       appearance: none;
       width: 100%;
@@ -492,7 +539,29 @@ li {
       -webkit-transition: 0.2s;
       transition: opacity 0.2s;
       border-radius: 5px;
-      overflow: visible;
+    }
+    &_input::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 11.5rem;
+      height: 8px;
+      background: #fe9013;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    &_input::-moz-range-thumb {
+      height: 11.5rem;
+      border-radius: 5px;
+      height: 8px;
+      background: #fe9013;
+      cursor: pointer;
+    }
+    &_input::-ms-thumb {
+      height: 11.5rem;
+      border-radius: 5px;
+      height: 8px;
+      background: #fe9013;
+      cursor: pointer;
     }
   }
   &_feedback {
@@ -605,11 +674,12 @@ li {
         justify-content: center;
         margin-right: 1.2rem;
       }
-      &_img:hover {
-        background-color: #f9804b;
+
+      &:hover &_img {
+        background-color: #4b9200;
       }
-      p:hover {
-        color: #f9804b;
+      &:hover p {
+        color: #4b9200;
       }
       a {
         text-decoration: none;
