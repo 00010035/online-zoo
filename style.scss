@@ -32,6 +32,7 @@ li {
   justify-content: space-around;
   align-items: center;
   display: flex;
+  height: 5rem;
   position: relative;
   a {
     color: #fff;
@@ -39,15 +40,11 @@ li {
   ul {
     display: flex;
     align-items: center;
-
+    gap: 3.6rem;
     li {
-      img {
-        padding: 0.5rem 0.6rem;
-      }
       a {
         color: #fff;
         font-size: 1rem;
-        padding: 1rem;
         display: block;
       }
     }
