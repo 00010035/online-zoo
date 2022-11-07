@@ -1,0 +1,27 @@
+@mixin font36px {
+  font-size: 2.25rem;
+}
+@mixin font400 {
+  font-weight: 400;
+}
+@mixin orange {
+  color: #f9804b;
+}
+@mixin green {
+  color: #4b9200;
+}
+@mixin container {
+  max-width: 72.5rem;
+}
+@mixin font16px {
+  font-size: 1rem;
+}
+@mixin textOrange {
+  color: #fe9013;
+}
+@mixin font24px {
+  font-size: 1.438rem;
+}
+@mixin font48px {
+  font-size: 3rem;
+}
