@@ -102,7 +102,7 @@ li {
     p {
       font-size: 1rem;
       font-weight: 500;
-      padding-top: 0.6rem;
+      padding-top: 0.4rem;
       line-height: 140%;
     }
   }
@@ -115,33 +115,195 @@ li {
   }
   &_donation {
     color: #fe9013;
-    font-size: 2.25rem;
     line-height: 130%;
+    padding: 3.7rem 0 4.5rem;
+
     h3 {
       font-weight: 400;
+      font-size: 2.25rem;
     }
-    padding: 2.5rem 0;
   }
   &_pick {
-    width: 72.5rem;
-    margin: 0 auto;
-    height: 57.375rem;
+    display: flex;
+    flex-direction: column;
+    // height: 57.375rem;
     background: rgba(255, 255, 255, 0.52);
     border-radius: 1.25rem;
+    padding: 2.5rem 5.75rem 3.75rem;
     &_text {
       h2 {
         font-size: 3rem;
         color: #fe9013;
+        margin-right: 0.75rem;
         font-weight: 400;
         text-align: center;
-        padding-top: 1.25rem;
       }
       p {
         font-size: 1.5rem;
-        text-align: center;
         font-weight: 400;
+        margin-top: 1.5rem;
         color: #333b41;
       }
     }
+    &_panda {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 3.75rem;
+      gap: 5.5rem;
+      padding-right: 0.8rem;
+      &_text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 3.4rem;
+        position: relative;
+        h2 {
+          color: #000;
+          font-weight: 500;
+          font-size: 4.5rem;
+          line-height: 80%;
+          margin-bottom: 0.6rem;
+        }
+        p {
+          line-height: 140%;
+          font-weight: 400;
+          font-size: 1rem;
+        }
+        p::after {
+          content: url(/assets/icons/x_icon.png);
+          position: absolute;
+          right: -16%;
+          top: 50%;
+          transform: translateY(20%);
+        }
+      }
+    }
+  }
+}
+.footer {
+  background-color: #000;
+  position: relative;
+  &_con {
+    padding: 4rem 0 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3.5rem;
+    &_donate {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      font-size: 1rem;
+      text-transform: uppercase;
+      text-align: center;
+      align-items: center;
+      border-radius: 0.5rem;
+      background-color: #f9804b;
+      padding: 1rem;
+    }
+    &_donate:hover {
+      background-color: #ae4e25;
+      cursor: pointer;
+    }
+  }
+  &_form {
+    max-width: 36.6rem;
+    grid-column: 3 / -1;
+    justify-self: right;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem 1rem;
+    h3 {
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: 400;
+      line-height: 1.8rem;
+      //   width: 100%;
+    }
+    &-input {
+      border: 1px solid orange;
+      border-radius: 0.5rem;
+      color: #fff;
+      outline: none;
+      flex: 1;
+      background-color: transparent;
+      //   width: 70%;
+      line-height: 140%;
+      padding: 0.7rem 1rem;
+      width: 14.25rem;
+    }
+    &-btn {
+      font-size: 1rem;
+      color: orange;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      //   width: 30%;
+      padding: 0.7rem 1.5rem;
+    }
+    &-btn:hover {
+      background-color: #f9804b;
+      color: #fff;
+    }
+  }
+
+  &_socials {
+    list-style: none;
+    grid-column: 1 / 1;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    &_li {
+      //   flex-wrap: wrap;
+      &_img {
+        height: 2.6rem;
+        width: 2.6rem;
+        background-color: #c4c4c480;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1.2rem;
+      }
+
+      &:hover &_img {
+        background-color: #4b9200;
+      }
+      &:hover p {
+        color: #4b9200;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 400;
+      }
+    }
+    &_li:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+  &_nav {
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+    a:hover {
+      color: #f9804b;
+      transition: 0.5s ease;
+    }
+  }
+  &_aut {
+    align-self: flex-end;
+    justify-self: end;
+    font-weight: 100;
+    font-size: 1rem;
+    line-height: 130%;
+    color: #ffffff;
+    text-decoration: none;
   }
 }
