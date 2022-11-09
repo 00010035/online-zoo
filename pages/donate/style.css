@@ -163,6 +163,97 @@ li {
   top: 50%;
   transform: translateY(20%);
 }
+.bg_range-text {
+  width: 50.6rem;
+  margin-top: 2.9rem;
+  padding-left: 0.2rem;
+}
+.bg_range-text p {
+  font-size: 1rem;
+  font-weight: 400;
+  padding-bottom: 1rem;
+}
+.bg_range-line {
+  background-color: #404950;
+  height: 1.8rem;
+  border-radius: 0.1rem;
+  display: flex;
+  align-items: center;
+  margin-top: 0.2rem;
+}
+.bg_range-line-middle {
+  width: 57.4rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.bg_range-line-middle::before {
+  content: "";
+  top: 50%;
+  left: 0;
+  height: 0.125rem;
+  width: 100%;
+  background-color: #72828e;
+  position: absolute;
+  transform: translateY(-50%);
+}
+.bg_range-line-middle input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #ffee2e;
+  font-style: inherit;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  position: relative;
+}
+.bg_range-line-middle input[type=radio]:checked {
+  border: 2px solid #fe9013;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  background-image: radial-gradient(circle at 50%, yellow 0px, yellow 4.5px, transparent 5.5px, transparent 100%);
+}
+.bg_range-line-middle input[type=radio]:checked:before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  transition: 150ms border-color ease-in-out;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid #fe9013;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.bg_range-line-middle input[type=radio]::after {
+  content: url(/assets/icons/dollar.png) attr(value);
+  filter: brightness(0) saturate(100%) invert(21%) sepia(18%) saturate(380%) hue-rotate(163deg) brightness(95%) contrast(93%);
+  color: #333b41;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 140%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(100% + 1rem);
+}
+.bg_range-line-middle input[type=radio]:checked:after {
+  filter: brightness(0) saturate(100%) invert(73%) sepia(71%) saturate(3923%) hue-rotate(349deg) brightness(102%) contrast(102%);
+}
 
 .footer {
   background-color: #000;
