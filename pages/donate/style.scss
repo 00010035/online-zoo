@@ -249,14 +249,6 @@ li {
         );
       }
       &-middle input[type="radio"]:checked:before {
-        // position: absolute;
-        // content: "";
-        // border-radius: 50%;
-        // transition: 150ms border-color ease-in-out;
-        // width: 40px;
-        // height: 40px;
-        // border-width: 2px;
-        // border-style: solid;
         position: absolute;
         content: "";
         border-radius: 50%;
@@ -287,24 +279,87 @@ li {
         filter: brightness(0) saturate(100%) invert(73%) sepia(71%)
           saturate(3923%) hue-rotate(349deg) brightness(102%) contrast(102%);
       }
+    }
+    &-input {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      &-btn {
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 500;
+        font-family: "Roboto";
+        line-height: 140%;
+        text-align: center;
+        background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+        border-radius: 25px;
+        padding: 1rem 4.5rem;
+        border: none;
+        margin: 1.8rem;
+      }
+      &-aaa {
+        position: relative;
+        img {
+          content: url(/assets/icons/dollar.png);
+          position: absolute;
+          top: 81%;
+          transform: translateY(-50%);
+          right: 0.6rem;
+        }
+      }
+    }
+    &-num {
+      margin-top: 5.75rem;
+      border: 1px solid #929699;
+      width: 16.75rem;
+      height: 3.375rem;
+      padding: 1rem 1.6rem 1rem 1rem;
 
-      //   &-middle input[type="radio"]:checked {
-      //     border-radius: 50%;
-      //     border: 1px solid #fe9013;
-      //     padding: 3px;
-      //     background: transparent;
-      //   }
+      background-color: transparent;
+    }
+
+    &-ratio {
+      margin-top: 1.9rem;
+      display: flex;
+      gap: 3.1rem;
+      input {
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        border: 1px solid #fe9013;
+        border-radius: 50%;
+        place-content: center;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+      input:checked {
+        background-color: #4b9200;
+        border: none;
+      }
+      label {
+        color: #333b41;
+        font-weight: 400;
+      }
+    }
+    &-p {
+      margin-top: 0.2rem;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 140%;
+      color: #333b41;
     }
   }
 }
+
 .footer {
   background-color: #000;
   position: relative;
   &_con {
-    padding: 4rem 0 5rem;
+    padding-top: 2.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 3.5rem;
+    gap: 1.5rem;
     &_donate {
       text-decoration: none;
       color: #fff;
@@ -312,6 +367,7 @@ li {
       font-size: 1rem;
       text-transform: uppercase;
       text-align: center;
+      width: 18.5rem;
       align-items: center;
       border-radius: 0.5rem;
       background-color: #f9804b;
@@ -341,7 +397,7 @@ li {
       border-radius: 0.5rem;
       color: #fff;
       outline: none;
-      flex: 1;
+      //   flex: 1;
       background-color: transparent;
       //   width: 70%;
       line-height: 140%;
@@ -353,7 +409,7 @@ li {
       color: orange;
       cursor: pointer;
       border-radius: 0.5rem;
-      //   width: 30%;
+      width: 34%;
       padding: 0.7rem 1.5rem;
     }
     &-btn:hover {

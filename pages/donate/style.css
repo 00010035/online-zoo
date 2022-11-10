@@ -256,16 +256,85 @@ li {
   top: 2.3rem;
   filter: brightness(0) saturate(100%) invert(73%) sepia(71%) saturate(3923%) hue-rotate(349deg) brightness(102%) contrast(102%);
 }
+.bg_range-input {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.bg_range-input-btn {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+  font-family: "Roboto";
+  line-height: 140%;
+  text-align: center;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  border-radius: 25px;
+  padding: 1rem 4.5rem;
+  border: none;
+  margin: 1.8rem;
+}
+.bg_range-input-aaa {
+  position: relative;
+}
+.bg_range-input-aaa img {
+  content: url(/assets/icons/dollar.png);
+  position: absolute;
+  top: 81%;
+  transform: translateY(-50%);
+  right: 0.6rem;
+}
+.bg_range-num {
+  margin-top: 5.75rem;
+  border: 1px solid #929699;
+  width: 16.75rem;
+  height: 3.375rem;
+  padding: 1rem 1.6rem 1rem 1rem;
+  background-color: transparent;
+}
+.bg_range-ratio {
+  margin-top: 1.9rem;
+  display: flex;
+  gap: 3.1rem;
+}
+.bg_range-ratio input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fe9013;
+  border-radius: 50%;
+  place-content: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.bg_range-ratio input:checked {
+  background-color: #4b9200;
+  border: none;
+}
+.bg_range-ratio label {
+  color: #333b41;
+  font-weight: 400;
+}
+.bg_range-p {
+  margin-top: 0.2rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 140%;
+  color: #333b41;
+}
 
 .footer {
   background-color: #000;
   position: relative;
 }
 .footer_con {
-  padding: 4rem 0 5rem;
+  padding-top: 2.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 3.5rem;
+  gap: 1.5rem;
 }
 .footer_con_donate {
   text-decoration: none;
@@ -274,6 +343,7 @@ li {
   font-size: 1rem;
   text-transform: uppercase;
   text-align: center;
+  width: 18.5rem;
   align-items: center;
   border-radius: 0.5rem;
   background-color: #f9804b;
@@ -302,7 +372,6 @@ li {
   border-radius: 0.5rem;
   color: #fff;
   outline: none;
-  flex: 1;
   background-color: transparent;
   line-height: 140%;
   padding: 0.7rem 1rem;
@@ -313,6 +382,7 @@ li {
   color: orange;
   cursor: pointer;
   border-radius: 0.5rem;
+  width: 34%;
   padding: 0.7rem 1.5rem;
 }
 .footer_form-btn:hover {
