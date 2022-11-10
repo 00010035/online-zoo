@@ -250,9 +250,10 @@ li {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: calc(100% + 1rem);
+  top: calc(100% + 1.5rem);
 }
 .bg_range-line-middle input[type=radio]:checked:after {
+  top: 2.3rem;
   filter: brightness(0) saturate(100%) invert(73%) sepia(71%) saturate(3923%) hue-rotate(349deg) brightness(102%) contrast(102%);
 }
 
