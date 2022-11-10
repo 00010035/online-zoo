@@ -397,8 +397,8 @@ li {
   flex-direction: column;
 }
 .footer_socials_li_img {
-  height: 2.6rem;
-  width: 2.6rem;
+  height: 1.5rem;
+  width: 1.5rem;
   background-color: rgba(196, 196, 196, 0.5019607843);
   border-radius: 50%;
   display: flex;
