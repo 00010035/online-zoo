@@ -332,6 +332,7 @@ li {
 }
 .footer_con {
   padding-top: 2.5rem;
+  padding-bottom: 3.1rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1.5rem;
@@ -393,6 +394,7 @@ li {
   list-style: none;
   grid-column: 1/1;
   display: flex;
+  margin-top: 1rem;
   position: relative;
   flex-direction: column;
 }
