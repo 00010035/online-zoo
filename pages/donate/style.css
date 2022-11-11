@@ -203,9 +203,12 @@ li {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
-  width: 0.5rem;
-  height: 0.5rem;
-  background-color: #ffee2e;
+  background-color: transparent;
+  margin: 0 -0.6rem;
+  cursor: pointer;
+  background-image: radial-gradient(circle at 50%, yellow 0px, yellow 4.5px, transparent 5.5px, transparent 100%);
+  width: 1.5rem;
+  height: 1.5rem;
   font-style: inherit;
   border-radius: 50%;
   cursor: pointer;
@@ -250,7 +253,7 @@ li {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: calc(100% + 1.5rem);
+  top: calc(100% + 1rem);
 }
 .bg_range-line-middle input[type=radio]:checked:after {
   top: 2.3rem;
